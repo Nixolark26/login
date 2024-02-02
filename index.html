@@ -3,7 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Login</title>
   </head>
-  <body></body>
+  <body class="flex-center">
+    <form class="flex-center">
+      <h1>Login</h1>
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <div class="account-actions">
+        <div class="remember-btn">
+          <input type="checkbox" id="rememberMe" />
+          <label for="rememberMe"> Remember me </label>
+        </div>
+        <button class="forgot-password">Forgot password?</button>
+      </div>
+      <button class="login-btn" onclick="login()">Log in</button>
+      <button class="register-btn" onclick="register()">Register</button>
+      <span id="error"></span>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
