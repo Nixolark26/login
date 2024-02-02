@@ -1,6 +1,8 @@
 :root {
   --blue: #0075ff;
   --dark-blue: #0055ff;
+  --green: #42b72a;
+  --dark-green: #36a420;
 }
 
 * {
@@ -34,6 +36,10 @@ form {
 
 form input:focus {
   box-shadow: 0px 0px 4px var(--blue);
+}
+
+.error-login {
+  border: 1px solid #f00;
 }
 form input {
   border: 1px solid #ccc;
@@ -95,18 +101,24 @@ form input {
 }
 
 .login-btn,
-.register-btn {
+.register-btn,
+.create-account-btn,
+.cancel-account-btn {
   font-size: 1.15rem;
   font-weight: 700;
 }
 
-.register-btn {
-  background-color: #ccc;
+.register-btn,
+.create-account-btn {
+  background-color: var(--green);
+  color: #fff;
 }
 
 .register-btn:hover,
-.register-btn:focus {
-  background-color: #bbb;
+.register-btn:focus,
+.create-account-btn:hover,
+.create-account-btn:focus {
+  background-color: var(--dark-green);
 }
 
 button {
@@ -120,4 +132,16 @@ input {
   border-radius: 0.25rem;
   border: none;
   outline: none;
+}
+
+.register-form {
+  position: absolute;
+  display: none;
+}
+
+.cancel-account-btn {
+  background-color: #ccc;
+}
+.cancel-account-btn:hover {
+  background-color: #bbb;
 }
